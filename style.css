@@ -1,0 +1,60 @@
+:root {
+    --blue: #7773ff;
+    --cyan: #eae6ff;
+    --bluish-gray: #abb8c3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-size: 12px;
+}
+
+.main__container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.main__container .main__container--link {
+    padding: 1rem 3rem;
+    font-size: 3rem;
+    text-decoration: none;
+    background-color: var(--cyan);
+    color: var(--blue);
+    border-radius: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.main__container .overlay {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: var(--bluish-gray);
+}
+
+.main__container .overlay.active {
+    animation: scaleFadeOut 2s ease-out;
+}
+
+@keyframes scaleFadeOut {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20);
+    }
+}
+
+
